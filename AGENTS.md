@@ -15,6 +15,15 @@ For each task, resolve the following skill identifiers from the current Codex se
 | `app-6aba497ee93c81919592399bfa4c4609:app-copy` | Writing website copy, page text, navigation labels, or calls to action. |
 | `imagegen` | Generating or editing bitmap concepts, illustrations, or website imagery. |
 
+| `app-6aba497ee93c81919592399bfa4c4609:ai-app-and-website-builder` | Website ideas, initial requirements, or the App Builder service workflow. |
+| `app-6aba497ee93c81919592399bfa4c4609:app-plan` | Planning website features, pages, flows, booking, shops, or implementation options. |
+| `app-6aba497ee93c81919592399bfa4c4609:app-code` | Requested website code, prototypes, or edits using the App Builder coding workflow. |
+| `app-6aba497ee93c81919592399bfa4c4609:app-check` | Reviewing a website or screen for SEO, accessibility, conversion, or copy improvements. |
+| `build-web-apps:stripe-best-practices` | Implementing or reviewing Stripe payments, Checkout, subscriptions, or Connect. |
+| `build-web-apps:supabase-postgres-best-practices` | Implementing or reviewing Supabase/Postgres schemas, queries, or database performance. |
+| `sites:sites` | Building, editing, publishing, or managing hosting through Sites, following its routing instructions. |
+| `sites:sites-remix` | Remixing an identified existing Sites website into a new Site. |
+
 Only apply skills relevant to the requested work. Their inclusion does not select a framework, install packages, or authorize a redesign. If a referenced skill is unavailable, report that limitation and continue any independent work that can be completed. Do not claim a skill was read or run unless it was.
 
 Skill implementations and plugin tools must be available in the executing Codex environment. This file routes tasks to those installed skills; it does not bundle or install them. Avoid committing machine-specific plugin cache paths or copies of plugin packages.
