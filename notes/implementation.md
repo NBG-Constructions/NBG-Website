@@ -16,7 +16,8 @@ The user's earlier internal website PRD informs this work. The PRD, internal des
 - [Midea](https://nbgconstructions.com.au/portfolio/midea-hvac-showroom-oakleigh-vic-2026/): scope is paraphrased without value, client quote, awards or speed claims.
 - [DAYALI](https://nbgconstructions.com.au/portfolio/dayali-roast-duck-hawthorne-vic-2026/): scope is paraphrased. Suburb spelling remains unresolved, so the draft uses Melbourne only.
 - Hold East Office: homepage title/location and existing image. The detail source timed out; no construction scope was inferred from the photograph.
-- Logo and photography load from NBG's existing host. They are not copied into the public repository. Confirm web-reuse rights, high-resolution originals, alt text and image optimisation before release.
+- Logo and photography load from NBG's existing host. They are not copied into the public repository. Confirm web-reuse rights, alt text and selection of the best available original files on the existing NBG website before release. Do not generate optimised or enhanced replacements.
+- User requirement: all photography and any future video must be unchanged originals from the existing NBG website. The build checks every rendered media URL against `src/media.mjs`; `scripts/audit-media.mjs` verifies the live homepage references and reads original bytes for SHA256 evidence. No video is included. Any future optimisation must preserve the user's originals-only instruction; do not silently create altered media variants.
 - No testimonials, staff profiles, certificates, numerical performance claims or old capability PDF are included without approval.
 
 All project records remain `draft`. Local review intentionally renders those drafts; it does not change their publication status. Do not treat the review build as approval or an approved production artefact.
@@ -40,7 +41,7 @@ The homepage hero was refined to a 4:1 desktop image frame and a 64px section tr
 2. Approved project scope, role, status, phase, photo rights and final service wording. Four candidate profiles are provided for review; the PRD's proposed six-case target is not met or silently padded.
 3. Real enquiry receiver/provider, server-side validation, rate limits, idempotency, failure/retry and verified delivery. Current tool prepares a local draft only. No submission ID or success state is faked.
 4. Public company contact details, current capability statement, policies and final privacy notice.
-5. Production canonical domain, sitemap, old-to-new URL redirect mapping, image variants/optimisation and real browser/device matrix. No DNS/mail records have been changed.
+5. Production canonical domain, sitemap, old-to-new URL redirect mapping, responsive layout using unchanged original NBG media and real browser/device matrix. No DNS/mail records have been changed.
 
 ## Publication controls
 

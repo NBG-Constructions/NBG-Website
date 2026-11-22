@@ -28,6 +28,14 @@ Only apply skills relevant to the requested work. Their inclusion does not selec
 
 Skill implementations and plugin tools must be available in the executing Codex environment. This file routes tasks to those installed skills; it does not bundle or install them. Avoid committing machine-specific plugin cache paths or copies of plugin packages.
 
+## Original NBG photography and video (user requirement)
+
+- All website photos and videos must be unmodified originals from the existing `nbgconstructions.com.au` website. Use the exact original URL, or a byte-identical copy with recorded source and checksum.
+- Do not generate, replace, retouch, recolour, composite, AI-enhance or re-encode photos/video. Do not ship stock images, generated concept imagery or altered posters. Do not produce edited/trimmed video without a new explicit user instruction.
+- Responsive CSS sizing/framing may adapt to the page; it must not change the source asset or apply colour filters/overlays. Keep the original scene and project association accurate.
+- Register original media in `src/media.mjs`; retain source evidence and run the origin audit when adding media. No video has been added yet; any future video needs its exact original NBG source, not a substitute.
+- This originals-only instruction takes precedence over optional image-generation suggestions in linked skills for this website.
+
 ## Project workflow
 
 - Use `main` for all updates, commits, pushes, and deployments. Do not create branches or pull requests.

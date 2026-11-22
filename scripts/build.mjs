@@ -2,6 +2,7 @@ import { mkdir, rm, cp, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { projects, services, sectors } from '../src/content.mjs';
+import { assertOriginalMedia } from '../src/media.mjs';
 import * as page from '../src/templates.mjs';
 
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -30,7 +31,9 @@ export async function build() {
   for (const [route, title, description, body] of routes) {
     const directory = path.join(output, route);
     await mkdir(directory, {recursive:true});
-    await writeFile(path.join(directory, 'index.html'), page.layout(route, title, description, body));
+    const html = page.layout(route, title, description, body);
+    assertOriginalMedia(html);
+    await writeFile(path.join(directory, 'index.html'), html);
   }
   await writeFile(path.join(output, '404.html'), page.layout('/404/', 'Page not found', 'Return to the NBG homepage or explore our projects.', page.notFound()));
   await writeFile(path.join(output, 'robots.txt'), 'User-agent: *\nDisallow: /\n');

@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-11-22T00:37:15.155Z",
+  "sourcePage": "https://nbgconstructions.com.au/",
+  "method": "Read existing homepage references and hash original source-file bytes without modification.",
+  "originals": [
+    {
+      "name": "logo",
+      "url": "https://nbgconstructions.com.au/wp-content/uploads/2022/06/go01-1-1-removebg-preview.png",
+      "sourceUrl": "http://nbgconstructions.com.au/wp-content/uploads/2022/06/go01-1-1-removebg-preview.png",
+      "httpsMatchesHttpOriginal": true,
+      "bytes": 83400,
+      "sha256": "58e8baf3d408899cc53c64f530f0e07a7bad3972798667a5938e481a2e83ace1"
+    },
+    {
+      "name": "richardson",
+      "url": "https://nbgconstructions.com.au/wp-content/uploads/2026/02/Richardson-Hall-home-page.png",
+      "bytes": 974618,
+      "sha256": "f2d719a25b184ee854278ed0a1316e2ce7120203a069243f6f1424e5f40cfe96"
+    },
+    {
+      "name": "dayali",
+      "url": "https://nbgconstructions.com.au/wp-content/uploads/2026/05/DA-YA-LI-homepage.png",
+      "bytes": 968292,
+      "sha256": "c2c09827e023cb3ccbf52185ed055b23398502f5c9fa1eb4868e1f5815532441"
+    },
+    {
+      "name": "midea",
+      "url": "https://nbgconstructions.com.au/wp-content/uploads/2026/05/Midea-home-page.png",
+      "bytes": 781887,
+      "sha256": "dfe3f5f8988567f195f9f5c76ad67e21d2fab95060738cd57f4274735cb9a542"
+    },
+    {
+      "name": "office",
+      "url": "https://nbgconstructions.com.au/wp-content/uploads/2026/06/Hold-East-Office-730x583-1.png",
+      "bytes": 969942,
+      "sha256": "973d53b67d10c4afcfeed2dc0e042e71f9a6d5429ce55bf9bbc58ce457c4a2f5"
+    }
+  ],
+  "video": "No video is currently included. Any future video must use an unchanged original from the existing NBG website."
+}

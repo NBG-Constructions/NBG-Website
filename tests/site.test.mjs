@@ -6,12 +6,28 @@ import { spawnSync, spawn } from 'node:child_process';
 import { once } from 'node:events';
 import { validateEnquiry, formatEnquiry } from '../src/scripts/enquiry.mjs';
 import { projects } from '../src/content.mjs';
+import { originalMedia, assertOriginalMedia } from '../src/media.mjs';
 import { root, output } from '../scripts/build.mjs';
 
 async function walk(dir) {
   const entries = await readdir(dir, {withFileTypes:true});
   return (await Promise.all(entries.map(entry => entry.isDirectory() ? walk(path.join(dir, entry.name)) : path.join(dir, entry.name)))).flat();
 }
+test('website media uses exact NBG originals and rejects replacements, altered URLs and unlisted video', async () => {
+  for (const value of Object.values(originalMedia)) {
+    const url = new URL(value);
+    assert.equal(url.origin, 'https://nbgconstructions.com.au');
+    assert.ok(url.pathname.startsWith('/wp-content/uploads/'));
+    assert.equal(url.search, '');
+  }
+  for (const project of projects) assert.ok(Object.values(originalMedia).includes(project.image));
+  for (const file of (await walk(output)).filter(file => file.endsWith('.html'))) assertOriginalMedia(await readFile(file,'utf8'));
+  assert.throws(() => assertOriginalMedia('<img src="/assets/generated-office.png">'));
+  assert.throws(() => assertOriginalMedia(`<img src="${originalMedia.office}?filter=warm">`));
+  assert.throws(() => assertOriginalMedia('<video src="https://example.com/replacement.mp4"></video>'));
+  assert.throws(() => assertOriginalMedia('<video poster="/assets/generated-poster.png"></video>'));
+  assert.throws(() => assertOriginalMedia(`<img src="${originalMedia.office}" srcset="/assets/edited-office.png 2x">`));
+});
 test('required fields, Unicode names, enumerated values and boundary lengths are checked', () => {
   assert.deepEqual(Object.keys(validateEnquiry({})), ['name','email','type','message']);
   const valid = {name:'李 明',email:'client@example.com',type:'Project enquiry',service:'Not sure',message:'Ten chars!'};

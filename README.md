@@ -16,6 +16,7 @@ Open http://127.0.0.1:4173 for local review. The server binds only to loopback. 
 ## Website structure
 
 - `src/content.mjs`: company, service, sector and project draft content with public-source references.
+- `src/media.mjs`: exact original NBG media URLs; the build rejects unlisted photos, posters and video sources.
 - `src/templates.mjs`: shared header/footer, home and page templates.
 - `src/styles/site.css`: application-only NBG design system styles.
 - `src/scripts/`: mobile navigation, URL-preserved project filtering and local enquiry drafts.
@@ -31,6 +32,10 @@ All updates are committed directly to `main`. GitHub Actions runs checks only. N
 The internal design system's specification, gallery, PRD and token manifests are not included here. Only the runtime visual rules and openly licensed fonts needed by the website are reused. Project images remain hosted on the existing NBG website and require release review.
 
 The contact page prepares a local draft, with copy/save actions. It **does not send an enquiry**. Real form receiving, approved public documents, project content and image rights remain release blockers.
+
+## Original media only
+
+All photos and any future video must come unchanged from the existing NBG website. No AI replacements, retouching, recolouring, altered footage or generated posters. Current pages reference the original files directly; responsive framing does not modify them. No video is currently included. Run `node scripts/audit-media.mjs` for a read-only check of source-page references and original-file SHA256 values. The audit uses the live NBG site; regular CI checks the registered URLs without relying on that external host. The verified [source ledger](notes/media-sources.json) records the original URLs, byte lengths and hashes.
 
 ## Codex website development skills
 

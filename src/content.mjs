@@ -1,11 +1,12 @@
 // Editorial draft for local review. Source assertions are not web-publication approvals.
 // Remote company photographs stay on the existing company host; no source library is copied.
+import { originalMedia } from './media.mjs';
 export const company = {
   name: 'NIU BUILDERS GROUP',
   legalName: 'NEWDECOR PTY LTD trading as NIU BUILDERS GROUP',
   location: 'Melbourne, Victoria',
   founded: '2009',
-  logo: 'https://nbgconstructions.com.au/wp-content/uploads/2022/06/go01-1-1-removebg-preview.png',
+  logo: originalMedia.logo,
   currentContact: 'https://nbgconstructions.com.au/contact/',
 };
 export const navigation = [['Projects', '/projects/'], ['Services', '/services/'], ['Sectors', '/sectors/'], ['About', '/about/'], ['Contact', '/contact/']];
@@ -22,7 +23,7 @@ export const services = [
 export const projects = [
   {
     slug: 'richardson-hall', title: 'Richardson Hall', sector: 'education', location: 'Monash University, Clayton',
-    image: 'https://nbgconstructions.com.au/wp-content/uploads/2026/02/Richardson-Hall-home-page.png',
+    image: originalMedia.richardson,
     alt: 'Brick student residence and landscaped grounds at Richardson Hall',
     summary: 'Renewing student accommodation within a university campus.',
     description: 'The existing NBG portfolio documents refurbishment work across Monash University residential halls, including Richardson Hall. This profile brings the campus accommodation work into one place for review.',
@@ -33,7 +34,7 @@ export const projects = [
   },
   {
     slug: 'dayali-roast-duck', title: 'DAYALI Roast Duck', sector: 'hospitality-retail', location: 'Melbourne, Victoria',
-    image: 'https://nbgconstructions.com.au/wp-content/uploads/2026/05/DA-YA-LI-homepage.png',
+    image: originalMedia.dayali,
     alt: 'DAYALI Roast Duck street frontage with illuminated restaurant signage',
     summary: 'A restaurant environment with hospitality at its heart.',
     description: 'A Melbourne restaurant project featured in NBG’s existing portfolio, bringing dining areas and the working requirements of a commercial kitchen into the fitout.',
@@ -44,7 +45,7 @@ export const projects = [
   },
   {
     slug: 'midea-showroom', title: 'Midea HVAC Showroom', sector: 'hospitality-retail', location: 'Oakleigh, Victoria',
-    image: 'https://nbgconstructions.com.au/wp-content/uploads/2026/05/Midea-home-page.png',
+    image: originalMedia.midea,
     alt: 'Glazed Midea HVAC showroom frontage and signage',
     summary: 'A commercial setting for product display and training.',
     description: 'NBG’s existing portfolio presents the Midea showroom as a space combining product displays, training and workplace functions in Oakleigh.',
@@ -55,7 +56,7 @@ export const projects = [
   },
   {
     slug: 'hold-east-office', title: 'Hold East Office', sector: 'office', location: 'Queen Street, Melbourne',
-    image: 'https://nbgconstructions.com.au/wp-content/uploads/2026/06/Hold-East-Office-730x583-1.png',
+    image: originalMedia.office,
     alt: 'Timber ceiling and meeting area at Hold East Office',
     summary: 'A workplace with warmth, texture and room to connect.',
     description: 'Hold East Office is a workplace project featured in NBG’s existing portfolio. The photography shows the material detail of the meeting and shared spaces.',
