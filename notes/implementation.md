@@ -10,12 +10,12 @@ The user's earlier internal website PRD informs this work. The PRD, internal des
 
 ## Sources and editorial state
 
-- Company name, legal identity, Melbourne location and establishment year: company information supplied by NBG.
+- Company name, legal identity, Melbourne base and establishment year: company information supplied by NBG. The user confirmed project coverage across Victoria and New South Wales, Australia, on 2026-11-22. Website service-area copy now covers both states; this does not claim a second office or invent NSW case studies.
 - Project titles, public photography URLs and descriptions: [existing company website](https://nbgconstructions.com.au/), checked 2026-11-22. Each record in `src/content.mjs` includes its public source and pending review note.
 - [Richardson Hall](https://nbgconstructions.com.au/portfolio/richardson-hall-monash-university-2026/): several phases and halls are described together. Dates, quantities, value and early-completion claims are omitted. Exact phase attribution remains to be approved.
 - [Midea](https://nbgconstructions.com.au/portfolio/midea-hvac-showroom-oakleigh-vic-2026/): scope is paraphrased without value, client quote, awards or speed claims.
 - [DAYALI](https://nbgconstructions.com.au/portfolio/dayali-roast-duck-hawthorne-vic-2026/): scope is paraphrased. Suburb spelling remains unresolved, so the draft uses Melbourne only.
-- Hold East Office: homepage title/location and existing image. The detail source timed out; no construction scope was inferred from the photograph.
+- Holder East Office: name corrected by the user on 2026-11-22. Project location and image come from the existing homepage. The detail source timed out; no construction scope was inferred from the photograph. The current route is `/projects/holder-east-office/`; the previous spelling redirects permanently. Original image URLs retain their actual historical filenames to preserve unchanged media.
 - Logo and photography load from NBG's existing host. They are not copied into the public repository. Confirm web-reuse rights, alt text and selection of the best available original files on the existing NBG website before release. Do not generate optimised or enhanced replacements.
 - User requirement: all photography and any future video must be unchanged originals from the existing NBG website. The build checks every rendered media URL against `src/media.mjs`; `scripts/audit-media.mjs` verifies the live homepage references and reads original bytes for SHA256 evidence. No video is included. Any future optimisation must preserve the user's originals-only instruction; do not silently create altered media variants.
 - No testimonials, staff profiles, certificates, numerical performance claims or old capability PDF are included without approval.

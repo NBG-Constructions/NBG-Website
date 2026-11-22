@@ -5,6 +5,7 @@ export const company = {
   name: 'NIU BUILDERS GROUP',
   legalName: 'NEWDECOR PTY LTD trading as NIU BUILDERS GROUP',
   location: 'Melbourne, Victoria',
+  serviceArea: 'Victoria & New South Wales, Australia',
   founded: '2009',
   logo: originalMedia.logo,
   currentContact: 'https://nbgconstructions.com.au/contact/',
@@ -12,13 +13,13 @@ export const company = {
 export const navigation = [['Projects', '/projects/'], ['Services', '/services/'], ['Sectors', '/sectors/'], ['About', '/about/'], ['Contact', '/contact/']];
 export const sectors = [
   { slug: 'education', title: 'Education', intro: 'Spaces for learning, living and campus life.', body: 'Student accommodation, learning spaces and university facilities each bring different operational needs. Start with the way your campus uses the space, the access available and the programme you have in mind.', image: 'richardson-hall' },
-  { slug: 'office', title: 'Office', intro: 'Workplaces shaped around the working day.', body: 'From meeting areas to shared spaces, an office fitout needs to support how people work. Discuss your layout, existing building, required services and plans for occupation with NBG.', image: 'hold-east-office' },
+  { slug: 'office', title: 'Office', intro: 'Workplaces shaped around the working day.', body: 'From meeting areas to shared spaces, an office fitout needs to support how people work. Discuss your layout, existing building, required services and plans for occupation with NBG.', image: 'holder-east-office' },
   { slug: 'hospitality-retail', title: 'Hospitality & retail', intro: 'Places to meet, experience and discover.', body: 'Restaurants and showrooms bring customer-facing spaces together with operational requirements. Tell us about the experience you want to create and the practical needs behind it.', image: 'dayali-roast-duck' },
 ];
 export const services = [
   { slug: 'commercial-construction', title: 'Commercial construction', short: 'Building works for commercial spaces and the people who use them.', intro: 'Bring the building, the brief and the practical requirements together.', scope: ['Commercial building works', 'Coordination with the project team', 'Construction and handover planning'], body: 'Talk to NBG about the building work your project needs. The scope, responsibilities and programme are agreed for each project, with the existing building and its use in view.', related: ['midea-showroom', 'dayali-roast-duck'] },
-  { slug: 'fitouts-refurbishments', title: 'Fitouts & refurbishments', short: 'New uses, renewed interiors and considered details.', intro: 'Make an existing space work for what comes next.', scope: ['Commercial interior fitouts', 'Refurbishment of existing spaces', 'Coordination of finishes and building services'], body: 'From workplace interiors to education and hospitality spaces, a fitout starts with the requirements of the people using it. Share your brief, drawings and priorities so the project scope can be defined.', related: ['richardson-hall', 'hold-east-office'] },
-  { slug: 'project-management', title: 'Project management', short: 'A clear conversation about scope, coordination and delivery.', intro: 'Keep the project conversation connected from brief to handover.', scope: ['Scope and programme discussions', 'Project team coordination', 'Construction progress and handover coordination'], body: 'Discuss the coordination support your project needs, who is involved and how responsibilities will be shared. The appointment and services are defined for the individual project.', related: ['midea-showroom', 'hold-east-office'] },
+  { slug: 'fitouts-refurbishments', title: 'Fitouts & refurbishments', short: 'New uses, renewed interiors and considered details.', intro: 'Make an existing space work for what comes next.', scope: ['Commercial interior fitouts', 'Refurbishment of existing spaces', 'Coordination of finishes and building services'], body: 'From workplace interiors to education and hospitality spaces, a fitout starts with the requirements of the people using it. Share your brief, drawings and priorities so the project scope can be defined.', related: ['richardson-hall', 'holder-east-office'] },
+  { slug: 'project-management', title: 'Project management', short: 'A clear conversation about scope, coordination and delivery.', intro: 'Keep the project conversation connected from brief to handover.', scope: ['Scope and programme discussions', 'Project team coordination', 'Construction progress and handover coordination'], body: 'Discuss the coordination support your project needs, who is involved and how responsibilities will be shared. The appointment and services are defined for the individual project.', related: ['midea-showroom', 'holder-east-office'] },
 ];
 export const projects = [
   {
@@ -55,14 +56,14 @@ export const projects = [
     approval: 'draft', review: 'Confirm final scope, current project status and photographic rights. No commercial value or performance claim is reproduced.'
   },
   {
-    slug: 'hold-east-office', title: 'Hold East Office', sector: 'office', location: 'Queen Street, Melbourne',
+    slug: 'holder-east-office', title: 'Holder East Office', sector: 'office', location: 'Queen Street, Melbourne',
     image: originalMedia.office,
-    alt: 'Timber ceiling and meeting area at Hold East Office',
+    alt: 'Timber ceiling and meeting area at Holder East Office',
     summary: 'A workplace with warmth, texture and room to connect.',
-    description: 'Hold East Office is a workplace project featured in NBG’s existing portfolio. The photography shows the material detail of the meeting and shared spaces.',
+    description: 'Holder East Office is a workplace project featured in NBG’s existing portfolio. The photography shows the material detail of the meeting and shared spaces.',
     scope: [], service: 'fitouts-refurbishments',
     source: 'https://nbgconstructions.com.au/',
-    approval: 'draft', review: 'The linked source verifies the name and location only. Confirm the spelling of Hold East, NBG role, scope, completion status and photographic rights. Do not infer scope from the image.'
+    approval: 'draft', review: 'The linked source verifies the name and location only. The user confirmed the name Holder East. Confirm NBG role, scope, completion status and photographic rights. Do not infer scope from the image.'
   },
 ];
 export const projectBySlug = slug => projects.find(project => project.slug === slug);

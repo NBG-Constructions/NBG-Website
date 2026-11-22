@@ -16,11 +16,11 @@ export async function build() {
   await cp(path.join(root, 'src/styles/site.css'), path.join(output, 'assets/site.css'));
   for (const file of ['site.mjs', 'enquiry.mjs']) await cp(path.join(root, 'src/scripts', file), path.join(output, 'assets', file));
   const routes = [
-    ['/', 'Commercial construction, fitouts & refurbishment', 'Melbourne commercial construction, fitouts and refurbishment. Explore NBG projects and discuss your space.', page.home()],
+    ['/', 'Commercial construction, fitouts & refurbishment', 'Commercial construction, fitouts and refurbishment across Victoria and New South Wales, Australia. Explore NBG projects.', page.home()],
     ['/projects/', 'Projects', 'Explore NBG’s education, office, hospitality and retail project portfolio.', page.projectIndex()],
     ['/services/', 'Services', 'Explore commercial construction, fitouts, refurbishment and project management with NBG.', page.serviceIndex()],
     ['/sectors/', 'Sectors', 'Explore NBG projects in education, office, hospitality and retail environments.', page.sectorIndex()],
-    ['/about/', 'About NBG', 'Meet Melbourne-based NIU Builders Group. Established in 2009 with a focus on commercial building and fitouts.', page.about()],
+    ['/about/', 'About NBG', 'Meet NIU Builders Group. Established in 2009, with commercial construction and fitout projects across Victoria and New South Wales.', page.about()],
     ['/contact/', 'Discuss your project', 'Prepare a project enquiry draft and find the current contact page for NIU Builders Group.', page.contact()],
     ['/privacy/', 'Privacy', 'How enquiry drafts, external images and links are handled in this unpublished website preview.', page.privacy()],
     ['/company-policy/', 'Company policies', 'Request current company policies and capability information from NIU Builders Group.', page.policies()],

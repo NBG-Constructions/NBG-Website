@@ -102,6 +102,9 @@ test('local server returns true 404s, protects source paths, preserves query red
     const redirect = await fetch('http://127.0.0.1:4174/projects?sector=office',{redirect:'manual'});
     assert.equal(redirect.status,308);
     assert.equal(redirect.headers.get('location'),'/projects/?sector=office');
+    const renamed = await fetch('http://127.0.0.1:4174/projects/hold-east-office/?sector=office',{redirect:'manual'});
+    assert.equal(renamed.status,301);
+    assert.equal(renamed.headers.get('location'),'/projects/holder-east-office/?sector=office');
     assert.equal((await fetch('http://127.0.0.1:4174/contact/',{method:'POST',body:'test'})).status,405);
   } finally { server.kill(); }
 });

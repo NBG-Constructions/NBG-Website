@@ -38,6 +38,8 @@ Skill implementations and plugin tools must be available in the executing Codex 
 
 ## Project workflow
 
+- User-confirmed website wording: the project name is **Holder East Office**. NBG projects cover **Victoria and New South Wales, Australia**, not Melbourne alone. Keep individual project locations factual. Preserve original NBG media URLs even when their historical filenames contain an old spelling.
+
 - Use `main` for all updates, commits, pushes, and deployments. Do not create branches or pull requests.
 - Before repository changes, inspect remotes, the current branch, worktree, and staging area; fetch and synchronize the latest `main` while preserving existing local work.
 - Resolve routine conflicts from context without discarding user changes or force-pushing remote history.

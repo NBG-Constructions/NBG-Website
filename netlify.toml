@@ -11,6 +11,16 @@
 [context.deploy-preview]
   command = "npm run build:production"
 
+[[redirects]]
+  from = "/projects/hold-east-office"
+  to = "/projects/holder-east-office/"
+  status = 301
+
+[[redirects]]
+  from = "/projects/hold-east-office/"
+  to = "/projects/holder-east-office/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]

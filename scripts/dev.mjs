@@ -10,6 +10,10 @@ const server = createServer(async (req, res) => {
   try {
     const url = new URL(req.url, 'http://localhost');
     let pathname = decodeURIComponent(url.pathname);
+    if (['/projects/hold-east-office', '/projects/hold-east-office/'].includes(pathname)) {
+      res.writeHead(301, {Location:'/projects/holder-east-office/' + url.search});
+      res.end(); return;
+    }
     let target = path.resolve(output, '.' + pathname);
     if (!target.startsWith(output + path.sep) && target !== output) throw new Error('Outside document root');
     let exists;
