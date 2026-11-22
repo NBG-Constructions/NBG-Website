@@ -1,0 +1,14 @@
+{
+  "name": "nbg-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "build:production": "node scripts/blocked-publication.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/build.mjs && node --test tests/*.test.mjs"
+  }
+}

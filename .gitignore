@@ -1,0 +1,9 @@
+dist/
+node_modules/
+notes/concepts/
+notes/qa/
+.env
+.env.*
+!.env.example
+.netlify/
+*.log
